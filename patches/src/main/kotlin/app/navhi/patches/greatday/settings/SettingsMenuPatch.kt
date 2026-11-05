@@ -1,6 +1,6 @@
 package app.navhi.patches.greatday.settings
 
-import app.navhi.patches.greatday.location.locationPickerPatch
+import app.navhi.patches.greatday.location.manualLocationPatch
 import app.navhi.patches.greatday.shared.addMethod
 import app.navhi.patches.greatday.shared.Constants.COMPATIBILITY_GREATDAY
 import app.morphe.patcher.Fingerprint
@@ -60,7 +60,7 @@ val settingsMenuPatch = bytecodePatch(
 ) {
     compatibleWith(COMPATIBILITY_GREATDAY)
 
-    dependsOn(locationPickerPatch, settingsActivityManifestPatch)
+    dependsOn(manualLocationPatch, settingsActivityManifestPatch)
 
     extendWith("extensions/extension.mpe")
 
