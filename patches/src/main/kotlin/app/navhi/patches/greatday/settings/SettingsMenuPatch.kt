@@ -18,8 +18,8 @@ private const val SETTINGS_CLASS = "app.navhi.extension.greatday.SettingsActivit
 
 /** The menu is useless without a registered screen behind it. */
 internal val settingsActivityManifestPatch = resourcePatch(
-    name = "Register Morphe Settings",
-    description = "Adds the settings screen to the manifest.",
+    name = "Morphe Settings screen",
+    description = "Declares the Morphe Settings screen that the menu entry opens.",
 ) {
     compatibleWith(COMPATIBILITY_GREATDAY)
 
@@ -55,7 +55,7 @@ private const val MENU_ID = 0x4e56
 /** "Morphe Settings" in the map screen's overflow menu. */
 @Suppress("unused")
 val settingsMenuPatch = bytecodePatch(
-    name = "Morphe Settings menu",
+    name = "Show Morphe Settings in the menu",
     description = "Adds the pin map, the detection switches and the about section behind a menu entry.",
 ) {
     compatibleWith(COMPATIBILITY_GREATDAY)

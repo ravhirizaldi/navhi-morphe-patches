@@ -39,8 +39,8 @@ private val checkInternalFingerprint = irootMethod("e", listOf("Lorg/json/JSONAr
 
 @Suppress("unused")
 val disableRootDetectionPatch = bytecodePatch(
-    name = "Disable root detection",
-    description = "Every IRoot check reports the device as unrooted.",
+    name = "Hide root",
+    description = "Attendance no longer fails on a rooted phone.",
 ) {
     compatibleWith(COMPATIBILITY_GREATDAY)
 

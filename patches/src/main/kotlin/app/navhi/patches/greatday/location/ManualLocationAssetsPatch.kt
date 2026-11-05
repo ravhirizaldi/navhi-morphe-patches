@@ -21,8 +21,8 @@ private const val TRACKER_STUB =
  * into the extension.
  */
 internal val manualLocationAssetsPatch = resourcePatch(
-    name = "Install manual location assets",
-    description = "Adds the geolocation override and stops the periodical tracker.",
+    name = "Use your own location",
+    description = "Makes the app read your saved point for every location request and turns the background tracker off.",
 ) {
     compatibleWith(COMPATIBILITY_GREATDAY)
 

@@ -49,6 +49,8 @@ data["version"] = version
 json.dump(data, open(patch_list, "w"), indent=2)
 PY
 
+python3 .github/scripts/generate_patches_readme.py rawhirizaldi/navhi-morphe-patches main
+
 git add -A
 git commit -m "chore: release $tag"
 git tag "$tag"

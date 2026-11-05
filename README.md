@@ -33,15 +33,18 @@ first. App data is wiped by that switch — back up anything local before you do
 | **Manual location picker** | Every location read returns the pinned point instead of the provider, until cleared. |
 | **Morphe Settings menu** | Overflow menu entry on the location screen: pin map, detection switches, about. |
 
-#### ⚙️ Morphe Settings
-
-The patch adds **Morphe Settings** to the location screen's overflow menu: a map
-to set or change the attendance point, three switches (mock, developer options,
-emulator — all off by default), and the about section. The pin survives restarts
-once saved and can be changed at any time; nothing is picked on the app's own map
-screen.
-
 <!-- PATCHES_END -->
+
+### ⚙️ Morphe Settings
+
+Open the overflow menu on the location screen and tap **Morphe Settings**. There you
+set the point you want to clock in from: pan the map, tap to drop the pin, **Save**.
+The saved point is used for every location read afterwards and survives restarts —
+change it whenever, or tap **Use real GPS** to go back to the phone's fix. The app's
+own map screen never asks you to pick anything.
+
+The same screen holds the three detection switches (fake GPS, developer options,
+emulator — all off by default) and a short about section.
 
 ## 🚀 Releasing
 

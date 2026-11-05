@@ -60,8 +60,8 @@ private fun pluginResultIndex(
 /** Every mock-location check answers with the switch value. */
 @Suppress("unused")
 val disableMockDetectionPatch = bytecodePatch(
-    name = "Disable mock location detection",
-    description = "Mock-location checks answer false by default, and a `loc` action exposes the pinned point.",
+    name = "Hide fake GPS apps",
+    description = "The app stops listing the fake-GPS apps on the phone and reports location as not mocked.",
 ) {
     compatibleWith(COMPATIBILITY_GREATDAY)
 
@@ -84,8 +84,8 @@ val disableMockDetectionPatch = bytecodePatch(
 /** Developer options and emulator answer with their switch value. */
 @Suppress("unused")
 val disableDeveloperOptionsDetectionPatch = bytecodePatch(
-    name = "Disable developer options and emulator detection",
-    description = "Developer options no longer block attendance, and the emulator flag is false by default.",
+    name = "Hide developer options and emulator",
+    description = "Developer options and emulators no longer block attendance.",
 ) {
     compatibleWith(COMPATIBILITY_GREATDAY)
 

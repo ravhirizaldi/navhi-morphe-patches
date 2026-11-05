@@ -34,8 +34,8 @@ private val backgroundFixFingerprints = listOf("b", "f").map { simpleName ->
 /** Hands the pinned point to every location consumer, or the real provider when off. */
 @Suppress("unused")
 val manualLocationPatch = bytecodePatch(
-    name = "Manual location picker",
-    description = "Pick any point on a map; every location read returns it until you clear it.",
+    name = "Keep the saved point in the app",
+    description = "The map, the attendance form and the background service all get your saved point instead of the real fix.",
 ) {
     compatibleWith(COMPATIBILITY_GREATDAY)
 
