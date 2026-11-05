@@ -22,16 +22,29 @@ first. App data is wiped by that switch — back up anything local before you do
 ## 🩹 Patches
 
 <!-- PATCHES_START EXPANDED -->
+> **[v1.0.3](https://github.com/rawhirizaldi/navhi-morphe-patches/releases/tag/v1.0.3)**&nbsp;&nbsp;•&nbsp;&nbsp;`main`&nbsp;&nbsp;•&nbsp;&nbsp;7 patches total
+<details open>
+<summary>📦 GreatDay HR&nbsp;&nbsp;•&nbsp;&nbsp;7 patches</summary>
+<br>
 
-### GreatDay HR
+**Package name:** `com.dataon.sunfishgo`
 
-| 💊 Patch | 📜 Description |
-|----------|----------------|
-| **Disable root detection** | Every `IRoot` check reports the device as unrooted. |
-| **Disable mock location detection** | Mock-location checks answer false, and a `loc` action exposes the pinned point. |
-| **Disable developer options and emulator detection** | Developer options and the emulator flag answer false. |
-| **Manual location picker** | Every location read returns the pinned point instead of the provider, until cleared. |
-| **Morphe Settings menu** | Overflow menu entry on the location screen: pin map, detection switches, about. |
+**🎯 Supported versions:**
+
+| 7.54.0 |
+| :---: |
+
+| 💊&nbsp;Patch | 📜&nbsp;Description | ⚙️&nbsp;Options |
+|----------|----------------|-----------|
+| [Hide developer options and emulator](#hide-developer-options-and-emulator) | Developer options and emulators no longer block attendance. |  |
+| [Hide fake GPS apps](#hide-fake-gps-apps) | The app stops listing the fake-GPS apps on the phone and reports location as not mocked. |  |
+| [Hide root](#hide-root) | Attendance no longer fails on a rooted phone. |  |
+| [Keep the saved point in the app](#keep-the-saved-point-in-the-app) | The map, the attendance form and the background service all get your saved point instead of the real fix. |  |
+| [Morphe Settings screen](#morphe-settings-screen) | Declares the Morphe Settings screen that the menu entry opens. |  |
+| [Show Morphe Settings in the menu](#show-morphe-settings-in-the-menu) | Adds the pin map, the detection switches and the about section behind a menu entry. |  |
+| [Use your own location](#use-your-own-location) | Makes the app read your saved point for every location request and turns the background tracker off. |  |
+
+</details>
 
 <!-- PATCHES_END -->
 
