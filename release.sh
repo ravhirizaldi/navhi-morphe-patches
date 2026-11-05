@@ -28,6 +28,8 @@ echo "releasing $current -> $version"
 
 sed -i "s/^version = .*/version = $version/" gradle.properties
 
+# The list generator picks an arbitrary .mpp from build/libs, so leave only this run's copy.
+rm -f patches/build/libs/*.mpp
 GITHUB_ACTOR=${GITHUB_ACTOR:?set GITHUB_ACTOR} ./gradlew buildAndroid generatePatchesList
 
 python3 - "$version" <<'PY'
