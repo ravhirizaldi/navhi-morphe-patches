@@ -43,6 +43,19 @@ screen.
 
 <!-- PATCHES_END -->
 
+## 🚀 Releasing
+
+GitHub Actions is dead on this account (billing), so releases are manual:
+
+```bash
+GITHUB_ACTOR=ravhirizaldi ./release.sh patch     # 1.0.1 -> 1.0.2
+```
+
+It bumps `gradle.properties`, rebuilds, regenerates `patches-list.json` and
+`patches-bundle.json`, commits, tags, pushes and publishes the release with the
+bundle attached. Merge the branch into `main` afterwards — Morphe Manager reads
+the source from `main`.
+
 ## 🛠️ Building
 
 ```bash
