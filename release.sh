@@ -36,7 +36,8 @@ version = sys.argv[1]
 bundle_path = "patches-bundle.json"
 bundle = json.load(open(bundle_path))
 bundle.update({
-    "created_at": datetime.datetime.now(datetime.timezone.utc).strftime("%Y-%m-%dT%H:%M:%SZ"),
+    # No trailing Z: the manager parses this straight with java.time.LocalDateTime.parse
+    "created_at": datetime.datetime.now(datetime.timezone.utc).strftime("%Y-%m-%dT%H:%M:%S"),
     "download_url": f"https://github.com/ravhirizaldi/navhi-morphe-patches/releases/download/v{version}/patches-{version}.mpp",
     "version": version,
 })
