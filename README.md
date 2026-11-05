@@ -28,6 +28,18 @@ first. App data is wiped by that switch — back up anything local before you do
 | 💊 Patch | 📜 Description |
 |----------|----------------|
 | **Disable root detection** | Every `IRoot` check reports the device as unrooted. |
+| **Disable mock location detection** | Mock-location checks answer false, and a `loc` action exposes the pinned point. |
+| **Disable developer options and emulator detection** | Developer options and the emulator flag answer false. |
+| **Manual location picker** | Every location read returns the pinned point instead of the provider, until cleared. |
+| **Location picker screen** | The app's own map screen drops a pin; confirm saves it, recentre goes back to live GPS. |
+| **Morphe Settings menu** | Overflow menu entry with the pin map, the detection switches and the about section. |
+
+#### ⚙️ Morphe Settings
+
+The patch adds **Morphe Settings** to the location screen's overflow menu: a map
+to set or change the attendance point, three switches (mock, developer options,
+emulator — all off by default), and the about section. The pin survives restarts
+once saved and can be changed at any time.
 
 <!-- PATCHES_END -->
 
